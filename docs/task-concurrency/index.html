@@ -1,31 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
     <title>ember-concurrency</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     
-<meta name="dummy/config/environment" content="%7B%22modulePrefix%22%3A%22dummy%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22ember-concurrency%22%2C%22version%22%3A%220.9.0+86dd9666%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%5D%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<meta name="test-app/config/environment" content="%7B%22modulePrefix%22%3A%22test-app%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22test-app%22%2C%22version%22%3A%220.0.0%2Bda780720%22%7D%2C%22emberConcurrencyVersion%22%3A%224.0.2%22%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%2C%22ember-concurrency.com%22%5D%7D%7D" />
 <!-- EMBER_CLI_FASTBOOT_TITLE -->
 
-    <link integrity="" rel="stylesheet" href="/assets/vendor-e754b247f0b14ad5fde0f302404dd7cb.css">
-    <link integrity="" rel="stylesheet" href="/assets/dummy-5496cde62cf89777292494c9c5331e67.css">
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link integrity="" rel="stylesheet" href="/assets/vendor-10d8eaf9101947f2130df71856c61a0b.css" />
+    <link integrity="" rel="stylesheet" href="/assets/test-app-0fb4f0511a8574d83c92a722b1036d1f.css" />
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     
   </head>
   <body>
-    <script type="x/boundary" id="fastboot-body-start"></script><div class="ember-view" id="ember350"><div class="container navbar">
+    <script type="x/boundary" id="fastboot-body-start"></script><div class="container navbar">
   <div class="row">
     <div class="ten columns">
       <h3 style="float:left;">
         ember-concurrency
 
         <span style="font-size: 0.5em;">
-          (v 0.9.0)
+          (<a id="ember399" class="ember-view" href="/docs/older-versions">v 4.0.2</a>)
         </span>
       </h3>
     </div>
@@ -36,7 +39,7 @@
     </div>
     <div class="one columns">
       <div class="nav-bar-link-outer">
-        <a href="https://github.com/machty/ember-concurrency" target="_blank">GitHub</a>
+        <a href="https://github.com/machty/ember-concurrency" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </div>
@@ -47,12 +50,22 @@
     <div class="three columns">
       <div class="side-menu">
             <div class="toc-entry">
-                <a href="/docs/introduction" id="ember351" class="ember-view">Home</a>
+                <a id="ember400" class="ember-view" href="/docs/introduction">Home</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/installation" id="ember352" class="ember-view">Installation</a>
+                <a id="ember401" class="ember-view" href="/docs/installation">Installation</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember402" class="ember-view" href="/docs/v4-upgrade">Upgrading to V4</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember403" class="ember-view" href="/docs/older-versions">Older Version Docs</a>
             </div>
 
 
@@ -60,17 +73,17 @@
               Introduction
             </div>
             <div class="toc-entry">
-                <a href="/docs/tutorial" id="ember353" class="ember-view">Writing Code Without Tasks</a>
+                <a id="ember404" class="ember-view" href="/docs/tutorial">Writing Code Without Tasks</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/tutorial/discussion" id="ember354" class="ember-view">Post-Mortem</a>
+                <a id="ember405" class="ember-view" href="/docs/tutorial/discussion">Post-Mortem</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/tutorial/refactor" id="ember355" class="ember-view">Refactoring With Tasks</a>
+                <a id="ember406" class="ember-view" href="/docs/tutorial/refactor">Refactoring With Tasks</a>
             </div>
 
 
@@ -78,65 +91,75 @@
               Reference
             </div>
             <div class="toc-entry">
-                <a href="/docs/task-function-syntax" id="ember356" class="ember-view">Task Function Syntax</a>
+                <a id="ember407" class="ember-view" href="/docs/task-function-syntax">Defining Tasks</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/task-concurrency" id="ember357" class="active ember-view">Managing Task Concurrency</a>
+                <a id="ember408" class="ember-view active" href="/docs/task-concurrency">Task Modifiers</a>
             </div>
 
 
-                <div class="toc-entry toc-subentry">
-                  <a href="/docs/task-concurrency-advanced" id="ember358" class="ember-view">Advanced</a>
-                  </div>
+<!---->            <div class="toc-entry">
+                <a id="ember409" class="ember-view" href="/docs/cancelation">Cancellation</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember410" class="ember-view" href="/docs/error-vs-cancelation">Handling Errors</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember411" class="ember-view" href="/docs/child-tasks">Child Tasks</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember412" class="ember-view" href="/docs/derived-state">Derived State</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember413" class="ember-view" href="/docs/events">Awaiting Events / Conditions</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember414" class="ember-view" href="/docs/testing-debugging">Testing &amp; Debugging</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember415" class="ember-view" href="/docs/typescript">TypeScript / Glint</a>
+            </div>
+
+
+<!---->            <div class="toc-entry">
+                <a id="ember416" class="ember-view" href="/docs/faq">FAQ &amp; Fact Sheet</a>
+            </div>
+
+
+<!---->            <div class="toc-section-title">
+              Advanced
+            </div>
             <div class="toc-entry">
-                <a href="/docs/cancelation" id="ember359" class="ember-view">Cancelation</a>
+                <a id="ember417" class="ember-view" href="/docs/task-concurrency-advanced">Using maxConcurrency</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/error-vs-cancelation" id="ember360" class="ember-view">Handling Errors</a>
+                <a id="ember418" class="ember-view" href="/docs/advanced/lifecycle-events">Lifecycle Events</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/child-tasks" id="ember361" class="ember-view">Child Tasks</a>
+                <a id="ember419" class="ember-view" href="/docs/advanced/task-modifiers">Task Modifiers</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/task-groups" id="ember362" class="ember-view">Task Groups</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a href="/docs/derived-state" id="ember363" class="ember-view">Derived State</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a href="/docs/encapsulated-task" id="ember364" class="ember-view">Encapsulated Tasks</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a href="/docs/events" id="ember365" class="ember-view">Awaiting Events / Conditions</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a href="/docs/task-lifecycle-events" id="ember366" class="ember-view">Lifecycle Events</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a href="/docs/testing-debugging" id="ember367" class="ember-view">Testing &amp; Debugging</a>
-            </div>
-
-
-<!---->            <div class="toc-entry">
-                <a href="/docs/faq" id="ember368" class="ember-view">FAQ &amp; Fact Sheet</a>
+                <a id="ember420" class="ember-view" href="/docs/advanced/yieldables">Yieldables / Controlling Execution</a>
             </div>
 
 
@@ -144,32 +167,32 @@
               Examples
             </div>
             <div class="toc-entry">
-                <a href="/docs/examples/loading-ui" id="ember369" class="ember-view">Loading UI</a>
+                <a id="ember421" class="ember-view" href="/docs/examples/loading-ui">Loading UI</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/examples/autocomplete" id="ember370" class="ember-view">Type-Ahead Search</a>
+                <a id="ember422" class="ember-view" href="/docs/examples/autocomplete">Type-Ahead Search</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/examples/increment-buttons" id="ember371" class="ember-view">Accelerating Increment Buttons</a>
+                <a id="ember423" class="ember-view" href="/docs/examples/increment-buttons">Accelerating Increment Buttons</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/examples/ajax-throttling" id="ember372" class="ember-view">AJAX Throttling</a>
+                <a id="ember424" class="ember-view" href="/docs/examples/ajax-throttling">AJAX Throttling</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/examples/route-tasks" id="ember373" class="ember-view">Route Tasks</a>
+                <a id="ember425" class="ember-view" href="/docs/examples/route-tasks">Route Tasks</a>
             </div>
 
 
 <!---->            <div class="toc-entry">
-                <a href="/docs/examples/joining-tasks" id="ember374" class="ember-view">Awaiting Multiple Child Tasks</a>
+                <a id="ember426" class="ember-view" href="/docs/examples/joining-tasks">Awaiting Multiple Child Tasks</a>
             </div>
 
 
@@ -178,19 +201,20 @@
     <div class="nine columns">
       <div class="row">
     <p class="u-pull-left">
-      Previous: <a href="/docs/task-function-syntax" id="ember375" class="ember-view">Task Function Syntax</a>
+      Previous: <a id="ember427" class="ember-view" href="/docs/task-function-syntax">Defining Tasks</a>
     </p>
 
     <p class="u-pull-right">
-      Next: <a href="/docs/task-concurrency-advanced" id="ember376" class="ember-view">Advanced</a>
+      Next: <a id="ember428" class="ember-view" href="/docs/cancelation">Cancellation</a>
     </p>
 </div>
 
-
-      <a title="Edit on Github" href="https://github.com/machty/ember-concurrency/edit/master/tests/dummy/app/docs/task-concurrency/template.hbs" id="ember377" class="github-edit ember-view"><i class="icon-pencil"></i>
+      <a class="github-edit" href="https://github.com/machty/ember-concurrency/edit/master/packages/test-app/app/docs/task-concurrency/template.hbs" title="Edit on GitHub">
+  <i class="icon-pencil"></i>
 </a>
 
-      <h3>Managing Task Concurrency</h3>
+
+      <h3>Task Modifiers</h3>
 
 <p>
   By default, <strong>ember-concurrency</strong> tasks run concurrently
@@ -219,14 +243,9 @@
   different task modifiers applied:
 </p>
 
-<pre id="ember378" class="javascript ember-view">export default Controller.extend({
-  defaultTask:     task(SHARED_TASK_FN),
-  restartableTask: task(SHARED_TASK_FN).restartable(),
-  enqueuedTask:    task(SHARED_TASK_FN).enqueue(),
-  droppingTask:    task(SHARED_TASK_FN).drop(),
-  keepLatestTask:  task(SHARED_TASK_FN).keepLatest(),
-});
-</pre>
+
+    <pre class="language-javascript "><code class="code-snippet language-javascript"></code></pre>
+  
 
 <h5 id="default">Default Behavior: Tasks Run Concurrently</h5>
 
@@ -235,30 +254,22 @@
   the lifetimes of each task overlap, and each task runs to completion.
 </p>
 
-<div id="ember379" class="ember-view"><button>task.perform()</button>
-<button>Clear Timeline</button>
+<div>
+  <button type="button">task.perform()</button>
+  <button type="button">Clear Timeline</button>
 <!---->
-<style type="text/css">
-g:hover {
-  stroke-width: 3px;
-  font-weight: 700;
-}
-</style>
-
-<svg style="width: 100%; padding: 5px;">
+  <svg class="concurrency-graph">
 <!---->
-  <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
-
-</svg>
-
-
+      <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
+  </svg>
 </div>
+
 
 
 <h4 id="restartable">restartable</h4>
 
 <p>
-  The <code>.restartable()</code> modifier ensures that only one instance
+  The <code>restartable</code> modifier ensures that only one instance
   of a task is running by canceling any currently-running tasks and starting
   a new task instance immediately. Note how there is no task overlap,
   and how currently running tasks get canceled
@@ -267,98 +278,74 @@ g:hover {
 
 <p>
   <em>
-    Check out <a href="/docs/examples/autocomplete" id="ember382" class="ember-view">Debounced Auto-Search</a> for
+    Check out <a id="ember429" class="ember-view" href="/docs/examples/autocomplete">Debounced Auto-Search</a> for
     a practical example of restartable
   </em>
 </p>
 
 
-<div id="ember383" class="ember-view"><button>task.perform()</button>
-<button>Clear Timeline</button>
+<div>
+  <button type="button">task.perform()</button>
+  <button type="button">Clear Timeline</button>
 <!---->
-<style type="text/css">
-g:hover {
-  stroke-width: 3px;
-  font-weight: 700;
-}
-</style>
-
-<svg style="width: 100%; padding: 5px;">
+  <svg class="concurrency-graph">
 <!---->
-  <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
-
-</svg>
-
-
+      <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
+  </svg>
 </div>
+
 
 <h4 id="enqueue">enqueue</h4>
 
 <p>
-  The <code>.enqueue()</code> modifier ensures that only one instance
+  The <code>enqueue</code> modifier ensures that only one instance
   of a task is running by maintaining a queue of pending tasks and
   running them sequentially. Note how there is no task overlap, but no
   tasks are canceled either.
 </p>
 
-<div id="ember386" class="ember-view"><button>task.perform()</button>
-<button>Clear Timeline</button>
+<div>
+  <button type="button">task.perform()</button>
+  <button type="button">Clear Timeline</button>
 <!---->
-<style type="text/css">
-g:hover {
-  stroke-width: 3px;
-  font-weight: 700;
-}
-</style>
-
-<svg style="width: 100%; padding: 5px;">
+  <svg class="concurrency-graph">
 <!---->
-  <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
-
-</svg>
-
-
+      <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
+  </svg>
 </div>
+
 
 
 <h4 id="drop">drop</h4>
 
 <p>
-  The <code>.drop()</code> modifier drops tasks that are <code>.perform()</code>ed
+  The <code>drop</code> modifier drops tasks that are <code>.perform()</code>ed
   while another is already running. Dropped tasks' functions are never even called.
 </p>
 
 <p>
   <em>
-    Check out the <a href="/docs/examples/loading-ui" id="ember389" class="ember-view">Loading UI</a> example for a common
-    use case for <code>.drop()</code>
+    Check out the <a id="ember430" class="ember-view" href="/docs/examples/loading-ui">Loading UI</a> example for a common
+    use case for <code>drop</code>
   </em>
 </p>
 
-<div id="ember390" class="ember-view"><button>task.perform()</button>
-<button>Clear Timeline</button>
+<div>
+  <button type="button">task.perform()</button>
+  <button type="button">Clear Timeline</button>
 <!---->
-<style type="text/css">
-g:hover {
-  stroke-width: 3px;
-  font-weight: 700;
-}
-</style>
-
-<svg style="width: 100%; padding: 5px;">
+  <svg class="concurrency-graph">
 <!---->
-  <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
-
-</svg>
-
-
+      <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
+  </svg>
 </div>
+
 
 
 <h4 id="keepLatest">keepLatest</h4>
 
 <p>
-  The <code>.keepLatest()</code> will drop all but the most recent intermediate <code>.perform()</code>,
+  The <code>keepLatest</code> will drop all but the most recent intermediate <code>.perform()</code>,
   which is enqueued to run later.
 </p>
 
@@ -370,50 +357,42 @@ g:hover {
   </em>
 </p>
 
-<div id="ember393" class="ember-view"><button>task.perform()</button>
-<button>Clear Timeline</button>
+<div>
+  <button type="button">task.perform()</button>
+  <button type="button">Clear Timeline</button>
 <!---->
-<style type="text/css">
-g:hover {
-  stroke-width: 3px;
-  font-weight: 700;
-}
-</style>
-
-<svg style="width: 100%; padding: 5px;">
+  <svg class="concurrency-graph">
 <!---->
-  <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
-
-</svg>
-
-
+      <line x1="0.001%" y1="0" x2="0.001%" y2="100" stroke="black"></line>
+  </svg>
 </div>
 
 
 
-      <br> <br> <br> <br> 
+      <br> <br> <br> <br>
 
       <div class="row">
     <p class="u-pull-left">
-      Previous: <a href="/docs/task-function-syntax" id="ember396" class="ember-view">Task Function Syntax</a>
+      Previous: <a id="ember431" class="ember-view" href="/docs/task-function-syntax">Defining Tasks</a>
     </p>
 
     <p class="u-pull-right">
-      Next: <a href="/docs/task-concurrency-advanced" id="ember397" class="ember-view">Advanced</a>
+      Next: <a id="ember432" class="ember-view" href="/docs/cancelation">Cancellation</a>
     </p>
 </div>
-
 
     </div>
   </div>
 </div>
 
 
-<div id="ember398" class="ember-notify-cn ember-notify-default ember-view"><!----></div>
-</div><script type="x/boundary" id="fastboot-body-end"></script>
+<div class="notifications-container">
+<!----></div>
+<script type="x/boundary" id="fastboot-body-end"></script>
 
-    <script src="/assets/vendor-1b391a79e3c189fd0f81248be77d66a2.js"></script>
-    <script src="/assets/dummy-8f65c68d1dd276bb206e931a4a069ca8.js"></script>
+    <script src="/assets/vendor-26832b57c057261a617e93c0f9538d54.js"></script>
+<script src="/assets/chunk.524.65fb6b9c5692fb4a80ad.js"></script>
+    <script src="/assets/test-app-ecd467dd8928605faf1b7263a6a19b87.js"></script>
 
     
   </body>
